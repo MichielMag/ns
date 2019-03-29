@@ -3,7 +3,7 @@ import { Station } from "./domain/station";
 import { Verstoring } from "./domain/verstoring";
 import { ArrivalBoard } from "./domain/arrival-board";
 
-var api = new API("3b6df5c9a0824761a29206141bc3ac8d");
+var api = new API("***REMOVED***");
 
 api.getAllStations()
     .then((stations : Station[]) => {
