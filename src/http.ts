@@ -17,9 +17,11 @@ export class Http implements IHttp
     {
         this.token = token;
         this.headers["Ocp-Apim-Subscription-Key"] = token;
+        this.headers["Accept"] = "application/json";
+        this.headers["User-Agent"] = "node-ns-api - https://github.com/MichielMag/node-ns-api";
     }
 
-    get<T>(url: string, params: any): Subject<APIMessage<T>> {
+    get<T>(url: string, params: any, contentType? : string): Subject<APIMessage<T>> {
         var subject = new Subject<APIMessage<T>>();
         var query = querystring.stringify(params);
         var uri = url;
@@ -27,14 +29,29 @@ export class Http implements IHttp
         {
             url += "?" + query;
         }
-        var request = https.get(url, {headers: this.headers}, (res : IncomingMessage) => {
+
+        var headers = this.headers;
+        if (contentType !== undefined && contentType !== null)
+        {
+            headers["Accept"] = contentType;
+        }
+
+        var request = https.get(url, {headers: headers}, (res : IncomingMessage) => {
             var json : string = "";
             res.on('data', (data : any) => {
                 json += data;
             });
             res.on('end', () => {
-                subject.next(JSON.parse(json));
-            })
+                var obj = JSON.parse(json);
+                if (obj.errors !== undefined)
+                {
+                    subject.error(obj);
+                }
+                else
+                {
+                    subject.next(JSON.parse(json));
+                }
+            });
             res.on('error', (err : Error) => {
                 subject.error(err);
             })
