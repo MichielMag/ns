@@ -37,7 +37,7 @@ export class Http implements IHttp {
 			requestHeaders[this.ACCEPT] = contentType;
 		}
 
-		const request = https.get(url, { headers: requestHeaders }, (res: IncomingMessage) => {
+		const request = https.get(uri, { headers: requestHeaders }, (res: IncomingMessage) => {
 			let json: string = '';
 			res.on('data', (data: any) => {
 				json += data;
