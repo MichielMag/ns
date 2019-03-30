@@ -60,3 +60,12 @@ typings/
 # next.js build output
 .next
 test.ts
+api-key.txt
+bfg-1.13.0.jar
+.git.bfg-report/2019-03-29/22-48-27/cache-stats.txt
+.git.bfg-report/2019-03-29/22-48-27/changed-files.txt
+.git.bfg-report/2019-03-29/22-48-27/object-id-map.old-new.txt
+.git.bfg-report/2019-03-29/22-52-15/object-id-map.old-new.txt
+.git.bfg-report/2019-03-29/22-48-27/protected-dirt/4f6dd18b-HEAD.csv
+.git.bfg-report/2019-03-29/22-52-15/cache-stats.txt
+.git.bfg-report/2019-03-29/22-52-15/changed-files.txt
