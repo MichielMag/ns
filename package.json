@@ -4,7 +4,8 @@
   "description": "NodeJS NS API Module",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && dts-bundle --name node-ns-api --main dist/index.d.ts"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "@types/request": "^2.48.1",
+    "dts-bundle": "^0.7.3",
     "request": "^2.88.0",
     "rxjs": "^6.4.0"
   }

@@ -3,7 +3,7 @@ import { Station } from './domain/station';
 import { Verstoring } from './domain/verstoring';
 import { TravelAdvice } from './domain/travel-advice';
 import { DepartureBoard } from './domain/departure-board';
-import { ArrivalDepartureParameters } from './params/arrival-parameters';
+import { ArrivalDepartureParameters } from './params/arrival-departure-parameters';
 import { ArrivalBoard } from './domain/arrival-board';
 import { TripParameters } from './params/trip-parameters';
 import { TripsParameters } from './params/trips-parameters';
