@@ -1,4 +1,4 @@
-import { DiscountType, ProductType, TravelClass } from "./enums";
+import { DiscountType, ProductType, TravelClass } from './enums';
 export interface Fare {
     discountType?: DiscountType;
     link?: string;

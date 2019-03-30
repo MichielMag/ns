@@ -1,4 +1,4 @@
-import { CommutingType } from "./enums";
+import { CommutingType } from './enums';
 export interface Product {
     categoryCode?: string;
     displayName?: string;

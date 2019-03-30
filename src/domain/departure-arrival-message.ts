@@ -1,4 +1,4 @@
 export interface DepartureArrivalMessage {
-    message?:  string;
-    priority?: number;
+	message?: string;
+	priority?: number;
 }

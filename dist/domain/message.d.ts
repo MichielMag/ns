@@ -1,4 +1,4 @@
-import { MessageType } from "./enums";
+import { MessageType } from './enums';
 export interface Message {
     endDate?: string;
     endTime?: string;

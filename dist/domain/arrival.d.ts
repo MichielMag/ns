@@ -1,5 +1,5 @@
-import { Product } from "./product";
-import { DepartureArrivalMessage } from "./departure-arrival-message";
+import { Product } from './product';
+import { DepartureArrivalMessage } from './departure-arrival-message';
 export interface Arrival {
     actualDateTime?: string;
     actualOrPlannedTime?: string;
@@ -12,8 +12,8 @@ export interface Arrival {
     plannedDateTime?: string;
     plannedTrack?: string;
     product?: Product;
-    routeStations?: {
+    routeStations?: Array<{
         [key: string]: any;
-    }[];
+    }>;
     trainCategory?: string;
 }

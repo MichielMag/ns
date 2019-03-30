@@ -13,24 +13,29 @@ var querystring = __importStar(require("querystring"));
 var Http = /** @class */ (function () {
     function Http(token) {
         this.headers = {};
+        this.OCP_APIM_SUBSCRIPTION_KEY = 'Ocp-Apim-Subscription-Key';
+        this.ACCEPT = 'Accept';
+        this.USER_AGENT = 'User-Agent';
+        this.APPLICATION_JSON = 'application/json';
+        this.USER_AGENT_VALUE = 'node-ns-api - https://github.com/MichielMag/node-ns-api';
         this.token = token;
-        this.headers["Ocp-Apim-Subscription-Key"] = token;
-        this.headers["Accept"] = "application/json";
-        this.headers["User-Agent"] = "node-ns-api - https://github.com/MichielMag/node-ns-api";
+        this.headers[this.OCP_APIM_SUBSCRIPTION_KEY] = token;
+        this.headers[this.ACCEPT] = this.APPLICATION_JSON;
+        this.headers[this.USER_AGENT] = this.USER_AGENT_VALUE;
     }
     Http.prototype.get = function (url, params, contentType) {
         var subject = new rxjs_1.Subject();
         var query = querystring.stringify(params);
         var uri = url;
         if (query !== null && query.length > 0) {
-            url += "?" + query;
+            uri += '?' + query;
         }
-        var headers = this.headers;
+        var requestHeaders = this.headers;
         if (contentType !== undefined && contentType !== null) {
-            headers["Accept"] = contentType;
+            requestHeaders[this.ACCEPT] = contentType;
         }
-        var request = https.get(url, { headers: headers }, function (res) {
-            var json = "";
+        var request = https.get(url, { headers: requestHeaders }, function (res) {
+            var json = '';
             res.on('data', function (data) {
                 json += data;
             });

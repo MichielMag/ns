@@ -1,4 +1,4 @@
 export interface Locatie {
-    code?:  string;
-    empty?: boolean;
+	code?: string;
+	empty?: boolean;
 }

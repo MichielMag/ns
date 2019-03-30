@@ -1,13 +1,13 @@
 import { IApi } from './i-api';
-import { Station } from './domain/station';
-import { Verstoring } from './domain/verstoring';
-import { TravelAdvice } from './domain/travel-advice';
-import { DepartureBoard } from './domain/departure-board';
-import { ArrivalDepartureParameters } from './params/arrival-departure-parameters';
 import { ArrivalBoard } from './domain/arrival-board';
+import { DepartureBoard } from './domain/departure-board';
+import { Station } from './domain/station';
+import { TravelAdvice } from './domain/travel-advice';
+import { Verstoring } from './domain/verstoring';
+import { ArrivalDepartureParameters } from './params/arrival-departure-parameters';
+import { DisruptionParameters } from './params/disruption-parameters';
 import { TripParameters } from './params/trip-parameters';
 import { TripsParameters } from './params/trips-parameters';
-import { DisruptionParameters } from './params/disruption-parameters';
 export declare class API implements IApi {
     private token;
     private http;

@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && dts-bundle --name node-ns-api --main dist/index.d.ts"
+    "build": "tsc && dts-bundle --name node-ns-api --main dist/index.d.ts",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,10 @@
   },
   "homepage": "https://github.com/MichielMag/node-ns-api#readme",
   "devDependencies": {
+    "prettier": "^1.16.4",
     "tsc": "^1.20150623.0",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.1"
   },
   "dependencies": {

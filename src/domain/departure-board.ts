@@ -1,6 +1,5 @@
-import { Departure } from "./departure";
+import { Departure } from './departure';
 
 export interface DepartureBoard {
-    departures?: Departure[];
+	departures?: Departure[];
 }
-

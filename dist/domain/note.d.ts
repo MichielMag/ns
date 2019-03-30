@@ -1,5 +1,5 @@
-import { NoteType } from "./enums";
-import { Link } from "./links";
+import { NoteType } from './enums';
+import { Link } from './links';
 export interface Note {
     alternativeTransport?: boolean;
     key?: string;

@@ -1,12 +1,12 @@
-import { CrowdForecast, TravelType, JourneyStatus } from "./enums";
-import { Destination } from "./destination";
-import { Stop } from "./stop";
-import { JourneyDetailLink } from "./journey-detail-link";
-import { LatLng } from "./lat-lng";
-import { Note } from "./note";
-import { Product } from "./product";
-import { Step } from "./step";
-import { Message } from "./message";
+import { CrowdForecast, TravelType, JourneyStatus } from './enums';
+import { Destination } from './destination';
+import { Stop } from './stop';
+import { JourneyDetailLink } from './journey-detail-link';
+import { LatLng } from './lat-lng';
+import { Note } from './note';
+import { Product } from './product';
+import { Step } from './step';
+import { Message } from './message';
 export interface Leg {
     alternativeTransport?: boolean;
     cancelled?: boolean;

@@ -107,7 +107,7 @@ var Status;
     Status["Replacement"] = "REPLACEMENT";
     Status["Special"] = "SPECIAL";
 })(Status = exports.Status || (exports.Status = {}));
-//Type4
+// Type4
 var AdviceSource;
 (function (AdviceSource) {
     AdviceSource["Google"] = "GOOGLE";
@@ -140,14 +140,14 @@ var NoteType;
     NoteType["Ticket"] = "TICKET";
     NoteType["Unknown"] = "UNKNOWN";
 })(NoteType = exports.NoteType || (exports.NoteType = {}));
-//Type3
+// Type3
 var LocationType;
 (function (LocationType) {
     LocationType["Address"] = "ADDRESS";
     LocationType["PointOfInterest"] = "POINT_OF_INTEREST";
     LocationType["Station"] = "STATION";
 })(LocationType = exports.LocationType || (exports.LocationType = {}));
-//Type
+// Type
 var ContentType;
 (function (ContentType) {
     ContentType["Btm"] = "BTM";

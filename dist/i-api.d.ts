@@ -1,12 +1,12 @@
-import { Station } from "./domain/station";
-import { Verstoring } from "./domain/verstoring";
-import { ArrivalDepartureParameters } from "./params/arrival-departure-parameters";
-import { ArrivalBoard } from "./domain/arrival-board";
-import { DepartureBoard } from "./domain/departure-board";
-import { TravelAdvice } from "./domain/travel-advice";
-import { DisruptionParameters } from "./params/disruption-parameters";
-import { TripParameters } from "./params/trip-parameters";
-import { TripsParameters } from "./params/trips-parameters";
+import { Station } from './domain/station';
+import { Verstoring } from './domain/verstoring';
+import { ArrivalDepartureParameters } from './params/arrival-departure-parameters';
+import { ArrivalBoard } from './domain/arrival-board';
+import { DepartureBoard } from './domain/departure-board';
+import { TravelAdvice } from './domain/travel-advice';
+import { DisruptionParameters } from './params/disruption-parameters';
+import { TripParameters } from './params/trip-parameters';
+import { TripsParameters } from './params/trips-parameters';
 export interface IApi {
     /**
      * List of stations

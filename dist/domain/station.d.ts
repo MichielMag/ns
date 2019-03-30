@@ -1,5 +1,5 @@
-import { Namen } from "./namen";
-import { StationType } from "./enums";
+import { Namen } from './namen';
+import { StationType } from './enums';
 export interface Station {
     code?: string;
     evacode?: string;

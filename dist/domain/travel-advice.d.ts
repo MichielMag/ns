@@ -1,4 +1,4 @@
-import { Trip } from "./trip";
+import { Trip } from './trip';
 export interface TravelAdvice {
     firstArrival?: string;
     firstDeparture?: string;

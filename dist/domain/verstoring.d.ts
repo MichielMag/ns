@@ -1,9 +1,9 @@
-import { Reisadviezen } from "./reisadviezen";
-import { Traject } from "./traject";
-import { VerstoringsType } from "./enums";
-import { BaanvakBeperking } from "./baanvak-beperking";
-import { Baanvak } from "./baanvak";
-import { Geldigheid } from "./geldigheid";
+import { Reisadviezen } from './reisadviezen';
+import { Traject } from './traject';
+import { VerstoringsType } from './enums';
+import { BaanvakBeperking } from './baanvak-beperking';
+import { Baanvak } from './baanvak';
+import { Geldigheid } from './geldigheid';
 export interface Verstoring {
     alternatiefVervoer?: string;
     baanvakBeperking?: BaanvakBeperking[];

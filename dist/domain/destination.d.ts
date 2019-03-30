@@ -1,5 +1,5 @@
-import { CheckinStatus, ExitSide, LocationType } from "./enums";
-import { Note } from "./note";
+import { CheckinStatus, ExitSide, LocationType } from './enums';
+import { Note } from './note';
 export interface Destination {
     actualDateTime?: string;
     actualTimeZoneOffset?: number;

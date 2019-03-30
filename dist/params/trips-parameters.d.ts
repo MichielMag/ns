@@ -203,7 +203,7 @@ export interface TripsParameters {
     /**
      * UIC code of the station of the trips destination
      */
-    destinationUicCode?: String;
+    destinationUicCode?: string;
     /**
      * UIC code of the station of the trips via point
      */

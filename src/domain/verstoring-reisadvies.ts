@@ -1,4 +1,4 @@
 export interface VerstoringReisadvies {
-    advies?: string[];
-    titel?:  string;
+	advies?: string[];
+	titel?: string;
 }

@@ -1,8 +1,8 @@
-import { CrowdForecast, Status, AdviceSource } from "./enums";
-import { Fare } from "./trip-fare";
-import { Leg } from "./leg";
-import { LatLng } from "./lat-lng";
-import { ShareURL } from "./share-url";
+import { CrowdForecast, Status, AdviceSource } from './enums';
+import { Fare } from './trip-fare';
+import { Leg } from './leg';
+import { LatLng } from './lat-lng';
+import { ShareURL } from './share-url';
 export interface Trip {
     actualDurationInMinutes?: number;
     checksum?: string;
