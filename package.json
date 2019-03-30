@@ -3,22 +3,31 @@
   "version": "0.0.1",
   "description": "NodeJS NS API Module",
   "main": "dist/index.js",
+  "types": "dist/node-ns-api.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && dts-bundle --name node-ns-api --main dist/index.d.ts",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MichielMag/node-ns-api.git"
   },
   "keywords": [
     "NS",
-    "api"
+    "API",
+    "Dutch",
+    "Railways",
+    "node-red"
   ],
   "author": "Michiel Klaassen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/MichielMag/node-ns-api/issues"
   },
