@@ -37,11 +37,11 @@
     "tsc": "^1.20150623.0",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.4.1"
+    "typescript": "^3.4.1",
+    "@types/request": "^2.48.1",
+    "dts-bundle": "^0.7.3"
   },
   "dependencies": {
-    "@types/request": "^2.48.1",
-    "dts-bundle": "^0.7.3",
     "request": "^2.88.0",
     "rxjs": "^6.4.0"
   }
