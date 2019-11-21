@@ -34,7 +34,7 @@ export class API implements IApi {
 
 	public getAllStations(): Promise<Station[]> {
 		return new Promise<Station[]>((resolve, reject) => {
-			this.http.get<Station[]>(this.ALLSTATIONSURL, null).subscribe(
+			this.http.get<APIMessage<Station[]>>(this.ALLSTATIONSURL, null).subscribe(
 				(message: APIMessage<Station[]>) => {
 					resolve(message.payload);
 				},
@@ -46,7 +46,7 @@ export class API implements IApi {
 	}
 	public getArrivals(params?: ArrivalDepartureParameters | undefined): Promise<ArrivalBoard> {
 		return new Promise<ArrivalBoard>((resolve, reject) => {
-			this.http.get<ArrivalBoard>(this.ARRIVALSURL, params).subscribe(
+			this.http.get<APIMessage<ArrivalBoard>>(this.ARRIVALSURL, params).subscribe(
 				(message: APIMessage<ArrivalBoard>) => {
 					resolve(message.payload);
 				},
@@ -58,7 +58,7 @@ export class API implements IApi {
 	}
 	public getDepartures(params?: ArrivalDepartureParameters | undefined): Promise<DepartureBoard> {
 		return new Promise<DepartureBoard>((resolve, reject) => {
-			this.http.get<DepartureBoard>(this.DEPARTURESURL, params).subscribe(
+			this.http.get<APIMessage<DepartureBoard>>(this.DEPARTURESURL, params).subscribe(
 				(message: APIMessage<DepartureBoard>) => {
 					resolve(message.payload);
 				},
@@ -70,7 +70,7 @@ export class API implements IApi {
 	}
 	public getBigDepartures(params?: ArrivalDepartureParameters | undefined): Promise<DepartureBoard> {
 		return new Promise<DepartureBoard>((resolve, reject) => {
-			this.http.get<DepartureBoard>(this.BIGDEPARTURESURL, params).subscribe(
+			this.http.get<APIMessage<DepartureBoard>>(this.BIGDEPARTURESURL, params).subscribe(
 				(message: APIMessage<DepartureBoard>) => {
 					resolve(message.payload);
 				},
@@ -82,7 +82,7 @@ export class API implements IApi {
 	}
 	public getDisruption(params: { id: string }): Promise<Verstoring> {
 		return new Promise<Verstoring>((resolve, reject) => {
-			this.http.get<Verstoring>(this.DISRUPTIONURL + params.id, params).subscribe(
+			this.http.get<APIMessage<Verstoring>>(this.DISRUPTIONURL + params.id, params).subscribe(
 				(message: APIMessage<Verstoring>) => {
 					resolve(message.payload);
 				},
@@ -94,7 +94,7 @@ export class API implements IApi {
 	}
 	public getDisruptions(params?: DisruptionParameters | undefined): Promise<Verstoring> {
 		return new Promise<Verstoring>((resolve, reject) => {
-			this.http.get<Verstoring>(this.DISRUPTIONSURL, params).subscribe(
+			this.http.get<APIMessage<Verstoring>>(this.DISRUPTIONSURL, params).subscribe(
 				(message: APIMessage<Verstoring>) => {
 					resolve(message.payload);
 				},
@@ -106,7 +106,7 @@ export class API implements IApi {
 	}
 	public getStationDisruption(params: { code: string }): Promise<Verstoring> {
 		return new Promise<Verstoring>((resolve, reject) => {
-			this.http.get<Verstoring>(this.STATIONDISRUPTIONURL + params.code, params).subscribe(
+			this.http.get<APIMessage<Verstoring>>(this.STATIONDISRUPTIONURL + params.code, params).subscribe(
 				(message: APIMessage<Verstoring>) => {
 					resolve(message.payload);
 				},
@@ -119,8 +119,8 @@ export class API implements IApi {
 	public getTrip(params?: TripParameters | undefined): Promise<TravelAdvice> {
 		return new Promise<TravelAdvice>((resolve, reject) => {
 			this.http.get<TravelAdvice>(this.TRIPURL, params).subscribe(
-				(message: APIMessage<TravelAdvice>) => {
-					resolve(message.payload);
+				(message: TravelAdvice) => {
+					resolve(message);
 				},
 				(error: any) => {
 					reject(error);
@@ -131,8 +131,8 @@ export class API implements IApi {
 	public getTrips(params?: TripsParameters | undefined): Promise<TravelAdvice> {
 		return new Promise<TravelAdvice>((resolve, reject) => {
 			this.http.get<TravelAdvice>(this.TRIPSURL, params).subscribe(
-				(message: APIMessage<TravelAdvice>) => {
-					resolve(message.payload);
+				(message: TravelAdvice) => {
+					resolve(message);
 				},
 				(error: any) => {
 					reject(error);
