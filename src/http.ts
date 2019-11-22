@@ -24,8 +24,8 @@ export class Http implements IHttp {
 		this.headers[this.USER_AGENT] = this.USER_AGENT_VALUE;
 	}
 
-	public get<T>(url: string, params: any, contentType?: string): Subject<APIMessage<T>> {
-		const subject = new Subject<APIMessage<T>>();
+	public get<T>(url: string, params: any, contentType?: string): Subject<T> {
+		const subject = new Subject<T>();
 		const query = querystring.stringify(params);
 		let uri = url;
 		if (query !== null && query.length > 0) {
