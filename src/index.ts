@@ -30,6 +30,7 @@ import {
 	MessageType,
 } from './domain/enums';
 import { Geldigheid } from './domain/geldigheid';
+import { IngangsDatum } from './domain/ingangs-datum';
 import { JourneyDetailLink } from './domain/journey-detail-link';
 import { LatLng } from './domain/lat-lng';
 import { Leg } from './domain/leg';
@@ -46,6 +47,7 @@ import { Self } from './domain/self';
 import { ShareURL } from './domain/share-url';
 import { Step } from './domain/step';
 import { Stop } from './domain/stop';
+import { Sporen } from './domain/sporen';
 import { Traject } from './domain/traject';
 import { TravelAdvice } from './domain/travel-advice';
 import { Trip } from './domain/trip';
@@ -86,6 +88,7 @@ export {
 	JourneyStatus,
 	MessageType,
 	Geldigheid,
+	IngangsDatum,
 	JourneyDetailLink,
 	LatLng,
 	Leg,
@@ -102,6 +105,7 @@ export {
 	ShareURL,
 	Step,
 	Stop,
+	Sporen,
 	Traject,
 	TravelAdvice,
 	Trip,
