@@ -1,9 +1,11 @@
 import { Namen } from './namen';
 import { StationType } from './enums';
+import { IngangsDatum } from './ingangs-datum';
+import { Sporen } from './sporen';
 
 export interface Station {
 	code?: string;
-	evacode?: string;
+	EVACode?: string;
 	heeftFaciliteiten?: boolean;
 	heeftReisassistentie?: boolean;
 	heeftVertrektijden?: boolean;
@@ -15,5 +17,7 @@ export interface Station {
 	radius?: number;
 	stationType?: StationType;
 	synoniemen?: string[];
-	uiccode?: string;
+	UICCode?: string;
+	ingangsDatum?: IngangsDatum;
+	sporen?: Sporen[];
 }
